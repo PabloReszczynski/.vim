@@ -19,6 +19,7 @@ Plugin 'neovimhaskell/haskell-vim'       " Haskell
 " Plugin 'justinmk/vim-syntax-extra'       " C syntax extra
 Plugin 'davidhalter/jedi-vim'            " Auto completion
 Plugin 'pangloss/vim-javascript'         " Javascript
+Plugin 'elixir-lang/vim-elixir'          " Elixir
 " Plugin 'mxw/vim-jsx'                     " React Jsx syntax
 Plugin 'Shougo/neocomplete'              " Auto completion
 Plugin 'bmatheny/vim-scala'              " Scala
@@ -48,16 +49,20 @@ let base16colorspace=256
 set background=dark
 colorscheme base16-embers
 
+set t_md =                              " disable bold
+
 syntax on
 
 " MacVim
-set guioptions-=m
-set guioptions-=T
-set guioptions-=r
-set guioptions-=L
-set guioptions+=e
+set guioptions-=m                       " remove menu bar
+set guioptions-=T                       " remove toolbar
+set guioptions-=r                       " remove right-hand scroll bar
+set guioptions-=L                       " remove left-hand scroll bar
+set guioptions+=e                       " gui tabs
 
-set guifont=Hack
+set guifont=Fantasque\ Sans\ Mono:h14
+
+highlight Comment gui=italic
 
 " Airline
 let g:airline_powerline_fonts=1
